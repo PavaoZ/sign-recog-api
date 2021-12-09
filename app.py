@@ -1,19 +1,20 @@
 from flask import (Flask, jsonify, request)
-# from matplotlib.pyplot import imshow
-# import matplotlib.cm as cm
-# import matplotlib.pylab as plt
-# import numpy as np
-# import PIL
-# from PIL import ImageFilter
-# import tensorflow
-# from tensorflow.keras.preprocessing.image import img_to_array
-# from tensorflow.keras.models import load_model
+from matplotlib.pyplot import imshow
+import matplotlib.cm as cm
+import matplotlib.pylab as plt
+import numpy as np
+import PIL
+from PIL import ImageFilter
+import tensorflow
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
 from flask_restful import Resource, Api
 from flask_cors import CORS
 from flask_ngrok import run_with_ngrok
 
 # We change here the origin
 # model = load_model('C:/Users/User/Desktop/Fakultet/POOS/Projekat model i ostalo/POOS project/top_model.h5')
+
 app = Flask(__name__)
 run_with_ngrok(app)
 CORS(app)
@@ -66,3 +67,11 @@ def rev_conv_label(label):
 if __name__ == '__main__':
     app.run()
     # app.run(debug=True)
+
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route("/")
+# def hello_world():
+#     return "<p>Hello, World!</p>"
