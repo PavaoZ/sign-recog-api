@@ -7,13 +7,7 @@ python3 -m venv venv
 . venv/bin/activate
 
 2. Install packages:
-pip install flask
-pip install keras
-pip install tensorflow
-pip install matplotlib
-pip install flask_restful
-pip install flask_cors
-pip install flask_ngrok
+pip install -r requirements.txt
 
 3. flask run
 
