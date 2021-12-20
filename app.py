@@ -26,7 +26,7 @@ def process_image():
     data = request.form.to_dict()
 
     return {
-        'label': "example"
+        "result": "example"
     }
     # Hardcoded value due to not enough time
     # img_path = request.get_json().get('image_path')
