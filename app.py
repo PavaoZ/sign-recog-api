@@ -23,20 +23,25 @@ api = Api(app)
 
 @app.route("/process-image", methods=["POST"])
 def process_image():
+    data = request.form.to_dict()
+
+    return {
+        'label': "example"
+    }
     # Hardcoded value due to not enough time
     # img_path = request.get_json().get('image_path')
-    img_path = "Lato.png"
-    pil_im = PIL.Image.open(img_path).convert('L')
-    pil_im = blur_image(pil_im)
-    org_img = img_to_array(pil_im)
-    data = []
-    data.append(org_img)
-    data = np.asarray(data, dtype="float") / 255.0
-    y = model.predict_classes(data)
-    label = rev_conv_label(int(y[0]))
-    return {
-        'label': label
-    }
+    # img_path = "Lato.png"
+    # pil_im = PIL.Image.open(img_path).convert('L')
+    # pil_im = blur_image(pil_im)
+    # org_img = img_to_array(pil_im)
+    # data = []
+    # data.append(org_img)
+    # data = np.asarray(data, dtype="float") / 255.0
+    # y = model.predict_classes(data)
+    # label = rev_conv_label(int(y[0]))
+    # return {
+    #     'label': label
+    # }
 
 
 @app.route('/')
@@ -65,13 +70,4 @@ def rev_conv_label(label):
 
 
 if __name__ == '__main__':
-    app.run()
-    # app.run(debug=True)
-
-# from flask import Flask
-
-# app = Flask(__name__)
-
-# @app.route("/")
-# def hello_world():
-#     return "<p>Hello, World!</p>"
+    app.run(debug=True)

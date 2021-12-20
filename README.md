@@ -1,13 +1,14 @@
 # sign-recog-api
+
 This repository is dedicated to the api for the sign language recognition api.
 
 Setup guide:
+
 1. Create virtual env
-python3 -m venv venv
-. venv/bin/activate
+   python3 -m venv venv
+   . venv/bin/activate or ./venv/Scripts/activate on windows
 
 2. Install packages:
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
-3. flask run
-
+3. flask run or flask run --host=0.0.0.0 --port=5000 (the host is your ip, which you can get with ipconfig, while the port is your desired portt)
