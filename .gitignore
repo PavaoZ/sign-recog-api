@@ -133,3 +133,10 @@ dmypy.json
 
 # DS Store
 .DS_Store
+
+yolov3_30000.weights
+yolov3.cfg
+image.jpeg
+obj.data
+image.jpeg
+model.h5
