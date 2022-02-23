@@ -15,18 +15,6 @@ from flask_ngrok import run_with_ngrok
 from base64 import b64decode
 import cv2
 
-# We change here the origin
-model = load_model(
-    'C:/Users/User/Desktop/Fakultet/Fifth year/First semester/MPVI/Project/sign-recog-api/model.h5')
-
-# net = Detector(
-#     bytes("yolov3.cfg ", encoding=" utf-8 "
-#           ),
-#     bytes(" yolov3_30000.weights ",
-#           encoding=" utf-8 "),
-#     0,
-#     bytes("obj.data ", encoding=" utf-8 "))
-
 app = Flask(__name__)
 run_with_ngrok(app)
 CORS(app)
