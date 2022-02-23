@@ -224,7 +224,10 @@ def process_image():
         print(v_labels[i], v_scores[i])
 
     return {
-        "result": "sdsdsd"
+        "result": {
+            "labels": v_labels,
+            "scorese": v_scores
+        }
     }
 
     # Hardcoded value due to not enough time
